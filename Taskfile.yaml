@@ -1,0 +1,51 @@
+# https://taskfile.dev
+
+version: '3'
+
+
+tasks:
+  default:
+    silent: true
+    cmds:
+      - echo ""
+      - task --list
+      - echo ""
+
+  setup:
+    silent: true
+    desc: Install the project locally
+    cmds:
+      - git submodule update --init -r
+      - hugo mod get -u
+
+
+  dev:
+    desc: Start the development server
+    summary: |-
+      task dev
+      task dev -- ...extra-args
+    silent: true
+    deps: [setup]
+    cmds:
+      - hugo server -D --bind 0.0.0.0 {{.CLI_ARGS}}
+      # - xdg-open http://0.0.0.0:1300
+
+  clean:
+    desc: Clean local folder
+    silent: true
+    cmds:
+      - hugo mod clean
+      - hugo mod tidy
+
+  new:
+    desc: New site content object
+    summary: |-
+      task new
+      task new -- 
+    cmds:
+      - echo "hugo new posts/my-first-post.md"
+    
+  build:
+    desc: Build site
+    cmds:
+      - hugo -D
