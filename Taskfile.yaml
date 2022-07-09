@@ -16,8 +16,9 @@ tasks:
     desc: Install the project locally
     cmds:
       - git submodule update --init -r
+      - git flow init --Use ./.gitconfig
+      - git flow init --local
       - hugo mod get -u
-
 
   dev:
     desc: Start the development server
