@@ -15,8 +15,8 @@ tasks:
     silent: true
     desc: Install the project locally
     cmds:
+      - git config --local include.path ../.gitconfig
       - git submodule update --init -r
-      - git flow init --Use ./.gitconfig
       - git flow init --local
       - hugo mod get -u
 
