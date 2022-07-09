@@ -5,3 +5,7 @@ theme: ananke
 
 permalinks:
   posts: /:year/:month/:title/
+
+# github.com/theNewDynamic/gohugo-theme-ananke
+# Submodule 'themes/universal' (https://github.com/devcows/hugo-universal-theme.git) registered for path 'themes/universal'
+# Submodule 'themes/yourfolio' (https://github.com/serg/yourfolio.git) registered for path 'themes/yourfolio'
