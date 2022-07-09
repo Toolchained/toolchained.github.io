@@ -17,7 +17,7 @@ tasks:
     cmds:
       - git config --local include.path ../.gitconfig
       - git submodule update --init -r
-      - git flow init --local
+      - git flow init --local --file ./.gitconfig
       - hugo mod get -u
 
   dev:
