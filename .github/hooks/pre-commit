@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# grep -Po '( +)\K(\w+)(?=\.+)'
+#   \K   = ignore before
+#   (?=) = look ahead
+
+BRANCH=$(git status -bs | head -n 1 | grep -Po '( +)\K(\w+)(?=\.+)')
+
+
+if [[ $BRANCH -eq "master" ]]; then
+	echo "is master"
+fi
