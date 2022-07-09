@@ -12,4 +12,4 @@
 	versiontag = v
 
 [gitflow "path"]
-	hooks = ./.hooks
+	hooks = ../.github/hooks
