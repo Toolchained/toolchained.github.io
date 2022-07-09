@@ -9,4 +9,6 @@ BRANCH=$(git status -bs | head -n 1 | grep -Po '( +)\K(\w+)(?=\.+)')
 
 if [[ $BRANCH -eq "master" ]]; then
 	echo "is master"
+	
 fi
+
