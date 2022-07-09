@@ -1,4 +1,7 @@
 
+[core]
+	hooksPath = ./.github/hooks
+
 [gitflow "branch"]
 	master = master
 	develop = develop
@@ -12,4 +15,4 @@
 	versiontag = v
 
 [gitflow "path"]
-	hooks = ../.github/hooks
+	hooks = ./.github/hooks
